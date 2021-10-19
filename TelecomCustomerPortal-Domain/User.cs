@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TelecomCustomerPortal_Data
+namespace TelecomCustomerPortal_Domain
 {
     public class User
     {
