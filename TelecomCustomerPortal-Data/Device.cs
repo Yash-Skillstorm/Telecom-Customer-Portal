@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace TelecomCustomerPortal_Data
 {
-    class Device
+    public class Device
     {
         int Id { get; set; }
-
-        int userId { get; set; }
-        int deviceID { get; set; }
-
         string PhoneNumber { get; set; }
+        public List<User> User { get; set; } = new List<User>();
+        
 
     }
 }

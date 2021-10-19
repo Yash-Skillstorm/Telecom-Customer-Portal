@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace TelecomCustomerPortal_Data
 {
-    class Plan
+    public class Plan
     {
-        int Id { get; set; }
-        string PlanName { get; set; }
-        int Price { get; set; }
-        int DeviceLimit { get; set; }
-
+        public int Id { get; set; }
+        public string PlanName { get; set; }
+        public int PlanPrice { get; set; }
+        public int DeviceLimit { get; set; }        
 
     }
 }

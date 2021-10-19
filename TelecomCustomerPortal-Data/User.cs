@@ -1,12 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TelecomCustomerPortal_Data
 {
     public class User
     {
-        int Id { get; set; }
-        string Name { get; set;  }
-        int deviceID { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set;  }
+        public List<Device> Device { get; set; } = new List<Device>();
 
     }
 }
