@@ -9,8 +9,11 @@ namespace TelecomCustomerPortal_Domain
     public class Device
     {
         int Id { get; set; }
+        string Name { get; set; }
         string PhoneNumber { get; set; }
-        public List<User> User { get; set; } = new List<User>();
+
+        int UserId { get; set; }
+     
         
 
     }

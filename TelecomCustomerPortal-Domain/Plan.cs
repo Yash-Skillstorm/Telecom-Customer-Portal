@@ -10,8 +10,10 @@ namespace TelecomCustomerPortal_Domain
     {
         public int Id { get; set; }
         public string PlanName { get; set; }
-        public int PlanPrice { get; set; }
-        public int DeviceLimit { get; set; }        
+        public int Price { get; set; }
+        public int DeviceLimit { get; set; }
+
+        public List<User> Users { get; set; } = new List<User>();
 
     }
 }

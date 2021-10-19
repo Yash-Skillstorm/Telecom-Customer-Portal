@@ -7,7 +7,7 @@ namespace TelecomCustomerPortal_Domain
     {
         public int Id { get; set; }
         public string Name { get; set;  }
-        public List<Device> Device { get; set; } = new List<Device>();
+        public List<Device> Devices { get; set; } = new List<Device>();
 
     }
 }
