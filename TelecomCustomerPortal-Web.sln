@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelecomCustomerPortal.Data"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelecomCustomerPortal.Domain", "TelecomCustomerPortal-Domain\TelecomCustomerPortal.Domain.csproj", "{48412B69-1DAA-4A1D-BD6C-99D3C9FD7325}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelecomCustomerProtal.Web", "TelecomCustomerProtal.Web\TelecomCustomerProtal.Web.csproj", "{F5B8A2A2-6BD5-4E19-9B56-4FC4A0EC48B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{48412B69-1DAA-4A1D-BD6C-99D3C9FD7325}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48412B69-1DAA-4A1D-BD6C-99D3C9FD7325}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48412B69-1DAA-4A1D-BD6C-99D3C9FD7325}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B8A2A2-6BD5-4E19-9B56-4FC4A0EC48B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B8A2A2-6BD5-4E19-9B56-4FC4A0EC48B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B8A2A2-6BD5-4E19-9B56-4FC4A0EC48B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B8A2A2-6BD5-4E19-9B56-4FC4A0EC48B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

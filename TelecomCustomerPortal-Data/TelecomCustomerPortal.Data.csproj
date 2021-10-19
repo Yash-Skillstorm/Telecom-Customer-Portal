@@ -13,4 +13,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TelecomCustomerPortal-Domain\TelecomCustomerPortal.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
