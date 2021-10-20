@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TelecomCustomerPortal_Domain
+namespace TelecomCustomerPortal.Domain
 {
     public class Plan
     {
@@ -14,6 +14,5 @@ namespace TelecomCustomerPortal_Domain
         public int DeviceLimit { get; set; }
 
         public List<User> Users { get; set; } = new List<User>();
-
     }
 }

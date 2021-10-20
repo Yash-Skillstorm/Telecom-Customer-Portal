@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TelecomCustomerPortal_Domain.DAO
+namespace TelecomCustomerPortal.Domain.DAO
 {
-    interface IUserDAO
+    interface IPlanDAO
     {
-
     }
 }

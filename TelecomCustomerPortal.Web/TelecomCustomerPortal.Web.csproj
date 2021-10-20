@@ -9,8 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TelecomCustomerPortal-Data\TelecomCustomerPortal.Data.csproj" />
-    <ProjectReference Include="..\TelecomCustomerPortal-Domain\TelecomCustomerPortal.Domain.csproj" />
+    <ProjectReference Include="..\TelecomCustomerPortal.Data\TelecomCustomerPortal.Data.csproj" />
   </ItemGroup>
 
 </Project>

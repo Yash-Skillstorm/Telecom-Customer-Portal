@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TelecomCustomerPortal_Domain
+namespace TelecomCustomerPortal.Domain
 {
     public class Device
     {
@@ -13,8 +13,5 @@ namespace TelecomCustomerPortal_Domain
         string PhoneNumber { get; set; }
 
         int UserId { get; set; }
-     
-        
-
     }
 }
