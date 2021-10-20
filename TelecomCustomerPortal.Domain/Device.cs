@@ -9,8 +9,6 @@ namespace TelecomCustomerPortal.Domain
     public class Device
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public List<Plan> Plan { get; set; } = new List<Plan>();
-        public List<User> Devices { get; set; } = new List<User>();
+        public string Name { get; set; }       
     }
 }
