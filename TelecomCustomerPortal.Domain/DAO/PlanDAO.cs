@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TelecomCustomerPortal.Domain.DAO
 {
-    class PlanDAO
+    public class PlanDAO : IPlanDAO
     {
     }
 }
