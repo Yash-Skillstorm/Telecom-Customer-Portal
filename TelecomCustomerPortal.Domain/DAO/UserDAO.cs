@@ -8,5 +8,7 @@ namespace TelecomCustomerPortal.Domain.DAO
 {
     public class UserDAO : IUserDAO
     {
+        
+        
     }
 }
