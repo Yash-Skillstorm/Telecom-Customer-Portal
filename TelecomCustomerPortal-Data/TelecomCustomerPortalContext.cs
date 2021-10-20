@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TelecomCustomerPortal_Domain;
 
-namespace TelecomCustomerPortal_Data
+namespace TelecomCustomerPortal.Data
 {
     public class TelecomCustomerPortalContext : DbContext
     {
