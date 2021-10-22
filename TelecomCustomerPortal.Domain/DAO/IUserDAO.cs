@@ -8,7 +8,7 @@ namespace TelecomCustomerPortal.Domain.DAO
 {
     interface IUserDAO
     {
-        public void testingpush();
+        public void LogIn();
    
     }
 }

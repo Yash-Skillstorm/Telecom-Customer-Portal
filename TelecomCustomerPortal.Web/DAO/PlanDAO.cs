@@ -6,14 +6,7 @@ using System.Threading.Tasks;
 
 namespace TelecomCustomerPortal.Domain.DAO
 {
-    public class UserDAO : IUserDAO
+    public class PlanDAO : IPlanDAO
     {
-
-        public void LogIn()
-        {
-           
-
-
-    }
     }
 }
