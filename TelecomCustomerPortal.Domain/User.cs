@@ -13,5 +13,7 @@ namespace TelecomCustomerPortal.Domain
         public string Password { get; set; }        
         //public List<Plan> Plan { get; set; }
 
+        public string Email { get; set; }
+
     }
 }

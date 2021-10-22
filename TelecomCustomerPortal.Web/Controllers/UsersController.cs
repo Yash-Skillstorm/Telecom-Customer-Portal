@@ -8,6 +8,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using TelecomCustomerPortal.Data;
 using TelecomCustomerPortal.Domain;
+using TelecomCustomerPortal.Domain.DAO;
 
 namespace TelecomCustomerPortal.Web.Controllers
 {
@@ -20,13 +21,30 @@ namespace TelecomCustomerPortal.Web.Controllers
         public UsersController(TelecomCustomerPortalContext context)
         {
             _context = context;
+
         }
 
         // GET: api/Users
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> GetUser()
-        {            
-            return await _context.User.ToListAsync();
+        public List<User> GetUser(string email,string password)
+        {
+            
+            //UserDAO usertemp = new UserDAO();
+            //List<User> userList = new List<User>(); ;
+        
+            //userList = usertemp.LogIn(email,password);
+
+            List<User> user;
+
+            user = _context.User.Where(p => (p.Email == email && p.Password == password)).ToList();
+
+            //_context.User.Where(p => p.Name == name).ToList();
+
+            return user;
+
+
+
+            
         }
 
         // GET: api/Users/5
