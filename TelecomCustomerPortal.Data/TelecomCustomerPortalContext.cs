@@ -14,6 +14,8 @@ namespace TelecomCustomerPortal.Data
         public DbSet<User> User { get; set; }
         public DbSet<Device> Device { get; set; }
         public DbSet<Plan> Plan { get; set; }
+        public DbSet<UsersPlans> UsersPlans { get; set; }
+        public DbSet<Summary> Summary { get; set; }
         public TelecomCustomerPortalContext()
         {
 
