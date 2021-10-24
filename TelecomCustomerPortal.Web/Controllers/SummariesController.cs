@@ -74,16 +74,18 @@ namespace TelecomCustomerPortal.Web.Controllers
         //    return NoContent();
         //}
 
-        //// POST: api/Summaries
-        //// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        //[HttpPost]
-        //public async Task<ActionResult<Summary>> PostSummary(Summary summary)
-        //{
-        //    _context.Summary.Add(summary);
-        //    await _context.SaveChangesAsync();
+        // POST: api/Summaries
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        
 
-        //    return CreatedAtAction("GetSummary", new { id = summary.Id }, summary);
-        //}
+        [HttpPost]
+        public async Task<ActionResult<UserPlanDevice>> PostSummary(UserPlanDevice userplandevice)
+        {
+            _context.UserPlanDevice.Add(userplandevice);
+            await _context.SaveChangesAsync();
+            return userplandevice;
+            //return CreatedAtAction("GetUserPlanDevice", new { id = userplandevice.Id }, userplandevice);
+        }
 
         //// DELETE: api/Summaries/5
         //[HttpDelete("{id}")]
