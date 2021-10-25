@@ -25,19 +25,23 @@ namespace TelecomCustomerPortal.Web.Controllers
 
         // GET: api/Users
         [HttpGet]
-        public List<User> GetUser(string email,string password)
+       /* public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+        {
+            return await _context.User.ToListAsync();
+        }
+       */
+
+        public List<User> LogIn(string email,string password)
         {
             
-            //UserDAO usertemp = new UserDAO();
-            //List<User> userList = new List<User>(); ;
-        
-            //userList = usertemp.LogIn(email,password);
+            
 
             List<User> user;
 
-            user = _context.User.Where(p => (p.Email == email && p.Password == password)).ToList();
+            //user = _context.User.Where(p => (p.Email == email && p.Password == password)).ToList();
+            user = _context.User.Where(p => p.Email == email).ToList();
 
-            //_context.User.Where(p => p.Name == name).ToList();
+
 
             return user;
 
@@ -45,6 +49,7 @@ namespace TelecomCustomerPortal.Web.Controllers
 
             
         }
+       
 
         // GET: api/Users/5
         [HttpGet("{id}")]
@@ -94,8 +99,13 @@ namespace TelecomCustomerPortal.Web.Controllers
         // POST: api/Users
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<User>> PostUser(User user)
+        public async Task<ActionResult<User>> PostUser(string name, string email, string password)
         {
+            User user = new User();
+ 
+            user.Name = name;
+            user.Email = email;
+            user.Password = password;
             _context.User.Add(user);
             await _context.SaveChangesAsync();
 

@@ -10,18 +10,18 @@ namespace TelecomCustomerPortal.Domain.DAO
     public class UserDAO : IUserDAO
     {
        
-        private readonly TelecomCustomerPortalContext _context;
+   
 
         
-        public List<User> LogIn(string email, string password)
+        public void LogIn(string email, string password)
         {
             List<User> user;
 
-            user = _context.User.Where(p => p.Email == email).ToList();
+            //user = User.Where(p => p.Email == email).ToList();
 
             //_context.User.Where(p => p.Name == name).ToList();
            
-            return user;
+            
         }
       
     }
