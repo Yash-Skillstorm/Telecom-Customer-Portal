@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using TelecomCustomerPortal.Data;
 using TelecomCustomerPortal.Domain;
@@ -55,13 +56,22 @@ namespace TelecomCustomerPortal.Web.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
+            
+            //var aa = _context.UsersPlansDevices.Where(p => p.UserId == id).ToList();
+            //foreach (var person in aa)
+            //{
+            //    Console.WriteLine(person.Id);
+            //    Console.WriteLine(person.PlanId);
+            //    var person2 = _context.Plan.Find(person.PlanId);
+            //    plans.Add(person2);
+            //    Console.WriteLine(person.PhoneNumber);                
+            //}
             var user = await _context.User.FindAsync(id);
-
+            
             if (user == null)
             {
                 return NotFound();
             }
-
             return user;
         }
 

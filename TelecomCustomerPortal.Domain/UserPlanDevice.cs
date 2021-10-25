@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace TelecomCustomerPortal.Domain
 {
-    public class Device
+    public class UserPlanDevice
     {
         public int Id { get; set; }
-        public string DeviceName { get; set; }
-        //public List<User> User { get; set; } = new List<User>();
+        public int UserId { get; set; }
+        public int PlanId { get; set; }
+        public int DeviceId { get; set; }
+        public string PhoneNumber { get; set; }
     }
 }

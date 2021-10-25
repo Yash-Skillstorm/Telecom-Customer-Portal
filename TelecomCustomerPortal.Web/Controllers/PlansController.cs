@@ -29,17 +29,19 @@ namespace TelecomCustomerPortal.Web.Controllers
         }
 
         // GET: api/Plans/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Plan>> GetPlan(int id)
+        [HttpGet("{Id}")]
+        public async Task<ActionResult<IEnumerable<Plan>>> GetAllPlanByUserID(int Id)
         {
-            var plan = await _context.Plan.FindAsync(id);
+            //var summary = await _context.Summary.FromSqlRaw("EXEC dbo.GetPlansDeviceByUserID {0}", Id).ToListAsync();
+            var plans = await _context.Plan.FromSqlRaw("EXEC dbo.GetAllPlansByUserID {0}", Id).ToListAsync();
+           // var plan = await _context.Plan.FindAsync(id);
 
-            if (plan == null)
+            if (plans == null)
             {
                 return NotFound();
             }
 
-            return plan;
+            return plans;
         }
 
         // PUT: api/Plans/5

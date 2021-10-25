@@ -8,5 +8,6 @@ namespace TelecomCustomerPortal.Domain.DAO
 {
     public class PlanDAO : IPlanDAO
     {
+        
     }
 }
