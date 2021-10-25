@@ -25,7 +25,7 @@ namespace TelecomCustomerPortal.Web.Controllers
         }
 
         // GET: api/Users
-        [HttpGet("{email}")]
+        [HttpGet]
        /* public asynTask<ActionResult<IEnumerable<User>>> GetUsers()
         {
             return await _context.User.ToListAsync();
