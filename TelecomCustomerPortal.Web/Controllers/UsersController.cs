@@ -31,8 +31,25 @@ namespace TelecomCustomerPortal.Web.Controllers
             return await _context.User.ToListAsync();
         }
        */
+       public List<User> LogIn(string email)
+        {
+            
+            
 
-        public List<User> LogIn(string email,string password)
+            List<User> user;
+
+            //user = _context.User.Where(p => (p.Email == email && p.Password == password)).ToList();
+           // user = _context.User.Where(p => p.Email == email).ToList();
+            user = _context.User.Where(p => p.Email == email).ToList();
+
+
+
+            return user;
+
+            
+        }
+
+      /*  public List<User> LogIn(string email,string password)
         {
             
             
@@ -46,10 +63,8 @@ namespace TelecomCustomerPortal.Web.Controllers
 
             return user;
 
-
-
             
-        }
+        }*/
        
 
         // GET: api/Users/5
