@@ -33,7 +33,7 @@ namespace TelecomCustomerPortal.Web
             {
                 options.AddDefaultPolicy(builder =>
                 {
-                    builder.WithOrigins("https://telecomcustomerportal-application.azurewebsites.net").AllowAnyHeader().AllowAnyMethod();
+                    builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
                 });
             });
             services.AddControllers();
