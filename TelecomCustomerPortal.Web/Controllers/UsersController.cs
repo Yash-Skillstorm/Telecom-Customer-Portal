@@ -26,26 +26,46 @@ namespace TelecomCustomerPortal.Web.Controllers
 
         // GET: api/Users
         [HttpGet]
-        public List<User> GetUser(string email,string password)
+       /* public asynTask<ActionResult<IEnumerable<User>>> GetUsers()
+        {
+            return await _context.User.ToListAsync();
+        }
+       */
+       public List<User> LogIn(string email)
         {
             
-            //UserDAO usertemp = new UserDAO();
-            //List<User> userList = new List<User>(); ;
-        
-            //userList = usertemp.LogIn(email,password);
+            
 
             List<User> user;
 
-            user = _context.User.Where(p => (p.Email == email && p.Password == password)).ToList();
+            //user = _context.User.Where(p => (p.Email == email && p.Password == password)).ToList();
+           // user = _context.User.Where(p => p.Email == email).ToList();
+            user = _context.User.Where(p => p.Email == email).ToList();
 
-            //_context.User.Where(p => p.Name == name).ToList();
+
 
             return user;
 
-
-
             
         }
+
+      /*  public List<User> LogIn(string email,string password)
+        {
+            
+            
+
+            List<User> user;
+
+            //user = _context.User.Where(p => (p.Email == email && p.Password == password)).ToList();
+            user = _context.User.Where(p => p.Email == email).ToList();
+
+
+
+            return user;
+
+            
+        }*/
+       
 
         // GET: api/Users/5
         [HttpGet("{id}")]
@@ -104,12 +124,14 @@ namespace TelecomCustomerPortal.Web.Controllers
         // POST: api/Users
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<User>> PostUser(User user)
+        public async Task<ActionResult<User>> PostUser(User newuser)
         {
-            _context.User.Add(user);
+            
+
+            _context.User.Add(newuser);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUser", new { id = user.Id }, user);
+            return CreatedAtAction("GetUser", new { id = newuser.Id }, newuser);
         }
 
         // DELETE: api/Users/5
