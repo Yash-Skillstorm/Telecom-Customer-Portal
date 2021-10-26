@@ -126,12 +126,12 @@ namespace TelecomCustomerPortal.Web.Controllers
         [HttpPost]
         public async Task<ActionResult<User>> PostUser(User newuser)
         {
-            User user = new User();
+            
 
             _context.User.Add(newuser);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUser", new { id = user.Id }, user);
+            return CreatedAtAction("GetUser", new { id = newuser.Id }, newuser);
         }
 
         // DELETE: api/Users/5
