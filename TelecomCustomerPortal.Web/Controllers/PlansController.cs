@@ -77,14 +77,23 @@ namespace TelecomCustomerPortal.Web.Controllers
 
         // POST: api/Plans
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Plan>> PostPlan(Plan plan)
-        {
-            _context.Plan.Add(plan);
-            await _context.SaveChangesAsync();
+        //[HttpPost]
+        //public async Task<ActionResult<Plan>> PostPlan(Plan plan)
+        //{
+        //    _context.Plan.Add(plan);
+        //    await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetPlan", new { id = plan.Id }, plan);
-        }
+        //    return CreatedAtAction("GetPlan", new { id = plan.Id }, plan);
+        //}
+
+        //[HttpPost]
+        //public async Task<ActionResult<UsersPlans>> PostUsersPlans(UsersPlans usersplans)
+        //{
+        //    _context.UsersPlans.Add(usersplans);
+        //    await _context.SaveChangesAsync();
+        //    return usersplans;
+        //    //return CreatedAtAction("GetUserPlanDevice", new { id = userplandevice.Id }, userplandevice);
+        //}
 
         // DELETE: api/Plans/5
         [HttpDelete("{id}")]

@@ -79,7 +79,7 @@ namespace TelecomCustomerPortal.Web.Controllers
         
 
         [HttpPost]
-        public async Task<ActionResult<UserPlanDevice>> PostSummary(UserPlanDevice userplandevice)
+        public async Task<ActionResult<UserPlanDevice>> PostUserPlanDevice(UserPlanDevice userplandevice)
         {
             _context.UserPlanDevice.Add(userplandevice);
             await _context.SaveChangesAsync();
@@ -87,18 +87,18 @@ namespace TelecomCustomerPortal.Web.Controllers
             //return CreatedAtAction("GetUserPlanDevice", new { id = userplandevice.Id }, userplandevice);
         }
 
-        //// DELETE: api/Summaries/5
+        // DELETE: UserPlanDevice = id
         //[HttpDelete("{id}")]
-        //public async Task<IActionResult> DeleteSummary(int id)
+        //public async Task<IActionResult> DeleteUserPlanDevice(int id)
         //{
-        //    var summary = await _context.Summary.FindAsync(id);
-        //    if (summary == null)
-        //    {
-        //        return NotFound();
-        //    }
+        //    //var userplandevice = await _context.UserPlanDevice.FindAsync(id);
+        //    //if (userplandevice == null)
+        //    //{
+        //    //    return NotFound();
+        //    //}
 
-        //    _context.Summary.Remove(summary);
-        //    await _context.SaveChangesAsync();
+        //    //_context.UserPlanDevice.Remove(userplandevice);
+        //    //await _context.SaveChangesAsync();
 
         //    return NoContent();
         //}
