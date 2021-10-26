@@ -31,11 +31,12 @@ namespace TelecomCustomerPortal.Web
 
             services.AddCors(options =>
             {
-                options.AddDefaultPolicy(builder =>
+                /*options.AddDefaultPolicy(builder =>
                 {
                     builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
 
-                });
+                });*/
+
                 options.AddPolicy(name: "prodorigin", 
                     builder => {
                         builder.WithOrigins("http://localhost:4200");
