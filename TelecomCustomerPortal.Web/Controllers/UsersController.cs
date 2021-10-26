@@ -8,7 +8,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using TelecomCustomerPortal.Data;
 using TelecomCustomerPortal.Domain;
-using TelecomCustomerPortal.Domain.DAO;
+
 
 namespace TelecomCustomerPortal.Web.Controllers
 {
@@ -26,28 +26,28 @@ namespace TelecomCustomerPortal.Web.Controllers
 
         // GET: api/Users
         [HttpGet]
-       /* public asynTask<ActionResult<IEnumerable<User>>> GetUsers()
+        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
             return await _context.User.ToListAsync();
         }
-       */
-       public List<User> LogIn(string email)
-        {
+
+        //public List<User> LogIn(string email)
+        //{
             
             
 
-            List<User> user;
+        //    List<User> user;
 
-            //user = _context.User.Where(p => (p.Email == email && p.Password == password)).ToList();
-           // user = _context.User.Where(p => p.Email == email).ToList();
-            user = _context.User.Where(p => p.Email == email).ToList();
+        //    //user = _context.User.Where(p => (p.Email == email && p.Password == password)).ToList();
+        //   // user = _context.User.Where(p => p.Email == email).ToList();
+        //    user = _context.User.Where(p => p.Email == email).ToList();
 
 
 
-            return user;
+        //    return user;
 
             
-        }
+        //}
 
       /*  public List<User> LogIn(string email,string password)
         {
