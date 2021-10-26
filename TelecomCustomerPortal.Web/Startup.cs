@@ -31,16 +31,16 @@ namespace TelecomCustomerPortal.Web
 
             services.AddCors(options =>
             {
-                /*options.AddDefaultPolicy(builder =>
+                options.AddDefaultPolicy(builder =>
                 {
                     builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
 
-                });*/
+                });
 
-                options.AddPolicy(name: "prodorigin", 
-                    builder => {
-                        builder.WithOrigins("http://localhost:4200");
-                    });
+                //options.AddPolicy(name: "prodorigin", 
+                //    builder => {
+                //        builder.WithOrigins("http://localhost:4200");
+                //    });
             });
             services.AddControllers();
             services.AddDbContext<TelecomCustomerPortalContext>(opt =>
@@ -68,7 +68,7 @@ namespace TelecomCustomerPortal.Web
 
             app.UseRouting();
 
-            app.UseCors("prodorigin");
+           // app.UseCors("prodorigin");
 
             app.UseAuthorization();
 
