@@ -33,7 +33,7 @@ namespace TelecomCustomerPortal.Web
             {
                 options.AddDefaultPolicy(builder =>
                 {
-                    builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
+                    builder.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod();
                 });
             });
             services.AddControllers();
