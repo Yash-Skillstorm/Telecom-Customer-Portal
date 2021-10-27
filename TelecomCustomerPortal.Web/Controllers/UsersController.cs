@@ -123,6 +123,26 @@ namespace TelecomCustomerPortal.Web.Controllers
 
         // POST: api/Users
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+
+        [HttpPost("api/Login")]
+        public async Task<ActionResult<User>> LoginUser(User user)
+        {
+
+
+            //_context.User.Add(newuser);
+            //await _context.SaveChangesAsync();
+            User check = new User();
+            check = await _context.User.FindAsync(user);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return user;
+
+            //return CreatedAtAction("GetUser", new { id = user.Id }, user);
+        }
+
         [HttpPost]
         public async Task<ActionResult<User>> PostUser(User newuser)
         {
