@@ -126,23 +126,16 @@ namespace TelecomCustomerPortal.Web.Controllers
 
         [HttpPost("Login")]
         public async Task<ActionResult<User>> LoginUser(User user)
-        {
-
-
-            //_context.User.Add(newuser);
-            //await _context.SaveChangesAsync();
-          
+        {          
             var tempUser = _context.User.FirstOrDefault(u => u.Email == user.Email && u.Password == user.Password);
 
             if (tempUser == null)
             {
                 //Not Authenticated
-                return NotFound();
+                return tempUser;
             }
 
             return tempUser;
-
-            //return CreatedAtAction("GetUser", new { id = user.Id }, user);
         }
 
         [HttpPost]
