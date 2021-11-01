@@ -32,9 +32,7 @@ namespace TelecomCustomerPortal.Web.Controllers
         [HttpGet("{Id}")]
         public async Task<ActionResult<IEnumerable<Plan>>> GetAllPlanByUserID(int Id)
         {
-            //var summary = await _context.Summary.FromSqlRaw("EXEC dbo.GetPlansDeviceByUserID {0}", Id).ToListAsync();
             var plans = await _context.Plan.FromSqlRaw("EXEC dbo.GetAllPlansByUserID {0}", Id).ToListAsync();
-           // var plan = await _context.Plan.FindAsync(id);
 
             if (plans == null)
             {
@@ -74,26 +72,6 @@ namespace TelecomCustomerPortal.Web.Controllers
 
             return NoContent();
         }
-
-        // POST: api/Plans
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        //[HttpPost]
-        //public async Task<ActionResult<Plan>> PostPlan(Plan plan)
-        //{
-        //    _context.Plan.Add(plan);
-        //    await _context.SaveChangesAsync();
-
-        //    return CreatedAtAction("GetPlan", new { id = plan.Id }, plan);
-        //}
-
-        //[HttpPost]
-        //public async Task<ActionResult<UsersPlans>> PostUsersPlans(UsersPlans usersplans)
-        //{
-        //    _context.UsersPlans.Add(usersplans);
-        //    await _context.SaveChangesAsync();
-        //    return usersplans;
-        //    //return CreatedAtAction("GetUserPlanDevice", new { id = userplandevice.Id }, userplandevice);
-        //}
 
         // DELETE: api/Plans/5
         [HttpDelete("{id}")]
