@@ -35,12 +35,7 @@ namespace TelecomCustomerPortal.Web
                 {
                     builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
 
-                });
-
-                //options.AddPolicy(name: "prodorigin", 
-                //    builder => {
-                //        builder.WithOrigins("http://localhost:4200");
-                //    });
+                });                
             });
             services.AddControllers();
             services.AddDbContext<TelecomCustomerPortalContext>(opt =>

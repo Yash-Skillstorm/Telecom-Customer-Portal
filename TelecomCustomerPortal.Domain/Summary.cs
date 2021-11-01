@@ -15,7 +15,8 @@ namespace TelecomCustomerPortal.Domain
         public int PlanId { get; set; }
         public string PlanName { get; set; }
         public int Price { get; set; }
-        public int DeviceLimit { get; set; }        
+        public int DeviceLimit { get; set; }
+        public string PhoneNumber { get; set; }
 
     }
 }
