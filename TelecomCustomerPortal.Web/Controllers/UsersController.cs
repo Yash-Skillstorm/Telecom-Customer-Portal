@@ -13,6 +13,7 @@ using TelecomCustomerPortal.Domain;
 namespace TelecomCustomerPortal.Web.Controllers
 {
     [Route("api/[controller]")]
+
     [ApiController]
     public class UsersController : ControllerBase
     {
